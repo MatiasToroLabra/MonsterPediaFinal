@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario Registro</title>
+ <!-- Logo -->
+	<link href="{% static 'img2/Logo175.ico' %}" rel="shortcut icon"/>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css2/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css2/mycustom.css' %}">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> <!--Iconos-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500" rel="stylesheet"> <!-- Google Fonts -->
+
+  </head>
+
+  <body>
+    <div class="mytop-content" >
+        <div class="container" >
+            <!-- Logo -->
+			<a class="site-logo" href="{% url 'index' %}">
+				<img src="{% static 'img2/Sin título.png' %}" alt="">
+			</a>
+			<div class="row">
+                <div class="col-sm-12" >
+                  <h1><strong>Dark Polifasicos /</strong> Formulario de Registro</h1>
+                  <div class="mydescription">
+                    <p>Registrate para acceder a mas contenido! </p>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3 myform-cont" >
+                    <div class="myform-top">
+                        <div class="myform-top-left">
+                          <h3>Registrate en Dark Polifasicos</h3>
+                            <p>Digita los siguientes datos:</p>
+                        </div>
+                        <div class="myform-top-right">
+                          <i class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+                    <div class="myform-bottom">
+                      <form role="form" action="" method="post" class="">
+                        <div class="form-group">
+                            <input type="text" name="form-firtsname" placeholder="Nombre" required="required" class="form-control" id="form-firtsname">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="form-lastname" placeholder="Apellido" required="required" class="form-control" id="form-lastname">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="form-email" placeholder="Correo Electrónico" required="required" class="form-control" id="form-email">
+                        </div>
+                        <button type="submit" class="mybtn">Registrar</button>
+                      </form>
+                    </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mysocial-login">
+                    <h3>Nuestras redes sociales:</h3>
+                    <div class="mysocial-login-buttons" >
+                      <a class="mybtn-social" href="#">
+                      <i class="fa fa-facebook"></i> Facebook
+                      </a>
+                      <a class="mybtn-social" href="#">
+                      <i class="fa fa-twitter"></i> Twitter
+                      </a>
+                      <a class="mybtn-social" href="#">
+                      <i class="fa fa-google-plus"></i> Google Plus
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <!-- Enlazamos el js de Bootstrap, y otros plugins que usemos siempre al final antes de cerrar el body -->
+    <script src="{% static 'js2/bootstrap.min.js' %}"></script>
+  </body>
+</html>

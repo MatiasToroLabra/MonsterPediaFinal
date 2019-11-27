@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Dark Polifasicos</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Game Warrior Template">
+	<meta name="keywords" content="warrior, game, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Logo -->   
+	<link href="{% static 'img/Logo175.ico' %}" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+  	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+  	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+  	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  	<link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
+</head>
+
+<body style="background-color:#080704;">
+	<audio src="{% static 'music/Monster Hunter World OST Main Theme   Stars At Our Backs 星に駆られて メインテーマソング HQ   4K.mp3' %}" autoplay></audio>
+	<!-- Carga de Pagina -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Seccion de Encabezamiento inicio -->
+	<header class="header-section">
+		<div class="container">
+		
+			<!-- Logo -->
+			<a class="site-logo" href="{% url 'index' %}">
+				<img src="{% static 'img/Sin título.png' %}" alt="">
+			</a>
+			<div class="user-panel">
+				<a href="{% url 'login' %}">Login</a>  /  <a href="register.html">Registrarse</a>
+			</div>
+			
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			
+			<!-- Menu -->
+			<nav class="main-menu">
+				<ul>
+					<li><a href="{% url 'index' %}">Inicio</a></li>
+					<li><a href="{% url 'monsters' %}">Mounstros</a></li>
+					<li><a href="{% url 'armors' %}">Armaduras</a></li>
+				</ul>
+			</nav>
+	</header>
+	<!-- <!--Seccion de Encabezamiento fin -->
+
+	<!-- Seccion de Noticias Inicio -->
+	<div class="latest-news-section">
+		<div class="ln-title">Atentos Cazadores</div>
+		<div class="news-ticker">
+			<div class="news-ticker-contant">
+				<div class="nt-item"><span class="new">new</span>Ya esta a la venta Monster Hunter World Iceborne! </div>
+				<div class="nt-item"><span class="new">new</span>Nuevo Evento Disponible en el Juego!</div>
+				<div class="nt-item"><span class="new">new</span>Rumores Indican que el Cazador se Uniria a la Plantilla de Smash Bros Ultimate!</div>
+			</div>
+		</div>
+	</div>
+	<!-- Seccion de Noticias fin -->
+
+	<!-- Seccion de Lista inicio -->
+	<div class="n spad set-bg" claset-bg" data-setbg="{% static 'img/1014252.jpg' %}">
+		<center><button class="aBk" id="c1b">Informacion</button>
+								<br>
+								<div id="cont1" class="bloque">
+								<br>
+									<center><h1>Lista de Armaduras</h1>
+										{% if armor_list %}
+	    							<ul>
+	    								{% for armor in armor_list %}
+	      									<li>
+	        									<a href="{{ armor.get_absolute_url }}"><big>{{ armor.namearmor }}</big></a> <h4>({{armor.monster}})</h4>
+	      									</li>
+	      								{% endfor %}
+									</ul>
+										{% else %}
+	      									<h4>No se Encuentran Armaduras en la Lista.</h4>
+	    								{% endif %}
+								</div>
+								{%	block	pagination	%}
+									{%	if	is_paginated	%}				
+										<div	class="pagination">	<span class="page-links">															<center>{%	if	page_obj.has_previous	%}																				<a	href="{{	request.path	}}?page={{	page_obj.previous_page_number	}}">Pagina Anterior</a>		{%	endif	%}							
+												<span	class="page-current">	
+												<center>Pagina	{{	page_obj.number	}}	De	{{	page_obj.paginator.num_pages	}}.</span>						<center>{%	if	page_obj.has_next	%}																			<a	href="{{	request.path	}}?page={{	page_obj.next_page_number	}}">Pagina Siguiente</a>			
+													{%	endif	%}</span>							
+										</div>			
+									{%	endif	%}	
+								{%	endblock	%}	
+	</div> 
+	<!-- Seccion de Lista Fin -->
+
+<!-- Seccion Link de Interes inicio -->
+<section class="footer-section">
+    <div class="container">
+      <div class="footer-menu">
+        <img src="{% static 'img/introduction_img.png' %}">
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-logo text-white">
+            <a class="site-logo" href="{% url 'index' %}">
+            <img src="{% static 'img/Sin título.png' %}" alt=""></a>
+          </div>
+        </div>
+      </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget">
+            <h4 class="fw-title">Links de Interes</h4>
+            <div class="top-comment">
+              <div class="tc-item">
+                <div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/1.jpg' %}"></div>
+                <div class="tc-content">
+                  <p><a target="_blank" href="https://www.youtube.com/channel/UCIWTcgFvjgLXBcUrR0UQgYA?view_as=subscriber">FenixMatiasLabra</a> Canal Youtuber de Juegos.</p>
+                </div>
+              </div>
+              <div class="tc-item">
+                <div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/2.jpg' %}"></div>
+                <div class="tc-content">
+                  <p><a target="_blank" href="https://www.facebook.com/LuzFlordeCerezo/">Luz flor de cerezo</a> Tienda de estampados y amigurumis</p>
+                </div>
+              </div>
+              <div class="tc-item">
+                <div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/3.jpg' %}"></div>
+                <div class="tc-content">
+                  <p><a target="_blank" href="https://www.facebook.com/daanagame/">Tienda Daana games</a> Venta de consolas, videojuegos y figuras de distintos animes y juegos.</p>
+                </div>
+                <br>
+                <img src="{% static 'img/Monster-Hunter-World-PNG-Download-Image.png' %}">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- Seccion Link de Interes fin -->
+
+  <!-- Menu 2 inicio -->
+  <footer class="footer-section">
+    <div class="container">
+      <ul class="footer-menu">
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'monsters' %}">Mounstros</a></li>
+        <li><a href="{% url 'armors' %}">Armaduras</a></li>
+      </ul>
+      <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | DarkPolifasicos Administradores: • Luis Toro • Michael Figueroa • Mario Muci</a></p>
+    </div>
+  </footer>
+  <!-- Menu 2 inicio -->
+
+  <!--====== Javascripts & Jquery ======-->
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.marquee.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

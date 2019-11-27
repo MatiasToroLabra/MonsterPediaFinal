@@ -1,0 +1,427 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Dark Polifasicos</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Game Warrior Template">
+  <meta name="keywords" content="warrior, game, creative, html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Logo -->
+  <link href="{% static 'img/Logo175.ico' %}" rel="shortcut icon"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
+
+</head>
+<body>
+  <audio src="{% static 'music/Proof of a Hero ~ 4Version   Super Smash Bros Ultimate.mp3' %}" autoplay></audio>
+
+  <!-- Carga de Pagina -->
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Seccion de Encabezamiento inicio -->
+  <header class="header-section">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="site-logo" href="{% url 'index' %}">
+        <img src="{% static 'img/Sin título.png' %}" alt="">
+      </a>
+      <div class="user-panel">
+        <a href="{% url 'login' %}">Login</a>  /  <a href="{% url 'register' %}">Registrarse</a>
+      </div>
+
+      <!-- Responsive -->
+      <div class="nav-switch">
+        <i class="fa fa-bars"></i>
+      </div>
+
+      <!-- Menu -->
+      <nav class="main-menu">
+        <ul>
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="{% url 'monsters' %}">Mounstros</a></li>
+          <li><a href="{% url 'armors' %}">Armaduras</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Seccion de Encabezamiento fin -->
+
+
+  <!-- Seccion Hero inicio -->
+  <section class="hero-section">
+    <div class="hero-slider owl-carousel">
+      <div class="hs-item set-bg" data-setbg="{% static 'img/Monster-Hunter-World-Iceborne-image.jpg' %}">
+        <div class="hs-text">
+          <div class="container">
+            <h2><span>Desata tu espíritu de cazador!</span></h2>
+            <p><big>Monster Hunter: World recibirá una expansión gigantesca titulada <br>
+              "Monster Hunter World: Iceborne." <br>
+              Un nuevo mundo te aguarda, con monstruos más poderosos y más desafíos en forma de misiones de rango maestro.</big>
+            </p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=yTEddvzKku0" class="site-btn">Ver Trailer</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="hs-item set-bg" data-setbg="{% static 'img/1552354383344.jpg' %}">
+        <div class="hs-text">
+          <div class="container">
+            <h2><span>Capcom celebra los 15 años de Monster Hunter con un vídeo retrospectivo</span></h2>
+            <p><big>La compañía de Osaka conmemora este especial momento para la saga con un vídeo el que repasan <br>
+              la evolución gráfica de la franquicia desde 2004.
+              Mosnter Hunter cumple 15 años. <br>
+              La saga de cacería por excelencia de Capcom se encuentra en su mejor momento a nivel comercial <br>
+              después de batir récords con Monster Hunter World, el videojuego individual más vendido de la historia <br>
+              de la saga y también de la compañía con más de 11 millones de unidades vendidas. Hoy lo celebran con un vídeo con cierto cariz emotivo. <br>
+              Con motivo del vídeo, Capcom ha dejado también un mensaje de agradecimiento para los fans donde podemos <br>
+              leer que “Este aniversario no solo trata de recuerdos, sino de la historia de Monster Hunter. <br>
+              Gracias a todos los títulos y eventos que han tenido lugar en todo el mundo, Monster Hunter ha continuado creciendo <br>
+              hasta convertirse en algo más que un simple juego. […] <br>
+              Agradecemos por todo lo que habéis logrado hasta ahora. <br>
+              Estamos muy emocionados con el futuro que está por venir; y esperamos que vosotros sintáis lo mismo”, finalizan.</big></p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=jq3txuqoeS8" class="site-btn">Ver Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="hs-item set-bg" data-setbg="{% static 'img/monster-hunter_-world-hd-wallpapers-33394-4961808.jpg' %}">
+        <div class="hs-text">
+          <div class="container">
+            <h2><span>Conoce Monster Hunter World y empieza tu caceria!</span></h2>
+            <p><big>Monster Hunter: World es un videojuego perteneciente al género de rol y acción, <br>
+              desarrollado y publicado por la empresa Capcom, siendo el sexto título principal de la franquicia <br>
+              de videojuegos Monster Hunter. <br>
+              El juego fue anunciado en la conferencia de Sony en la E3 2017.2​ Su lanzamiento mundial <br>
+              se produjo el 26 de enero de 2018 en las consolas PlayStation 4 y Xbox One; <br>
+              mientras que su fecha de salida para Microsoft Windows fue el 9 de agosto de 2018.</big>​</p>
+            <a target="_blank" href="http://www.monsterhunterworld.com/es/" class="site-btn">Visita la Pagina Oficial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Seccion Hero fin -->
+
+
+  <!-- Seccion de Noticias Inicio -->
+  <div class="latest-news-section">
+    <div class="ln-title">Atentos Cazadores</div>
+    <div class="news-ticker">
+      <div class="news-ticker-contant">
+        <div class="nt-item"><span class="new">new</span>Ya esta a la venta Monster Hunter World Iceborne! </div>
+        <div class="nt-item"><span class="new">new</span>Nuevo Evento Disponible en el Juego!</div>
+        <div class="nt-item"><span class="new">new</span>Rumores Indican que el Cazador se Uniria a la Plantilla de Smash Bros Ultimate!</div>
+      </div>
+    </div>
+  </div>
+  <!-- Seccion de Noticias fin -->
+
+
+  <!-- Seccion de Juegos inicio -->
+  <section class="feature-section spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 p-0">
+          <div class="feature-item set-bg" data-setbg="{% static 'img/features/ice.jpg' %}">
+            <span class="cata new">new</span>
+            <div class="fi-content text-white">
+              <h5><a target="_blank" href="https://www.monsterhunter.com/world-iceborne/es/" >Monster Hunter World Iceborne</a></h5>
+              <p>Fecha de estreno inicial: 2019 <br>
+                Desarrollador: Capcom <br>
+                Distribuidor: Capcom <br>
+                Plataformas: PlayStation 4, Microsoft Windows, Xbox One <br>
+                Géneros: Videojuego de acción-aventura, Videojuego de rol de acción</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-0">
+          <div class="feature-item set-bg" data-setbg="{% static 'img/features/world.jpg' %}">
+            <span class="cata new">new</span>
+            <div class="fi-content text-white">
+              <h5><a target="_blank" href="http://www.monsterhunterworld.com/es/" >Monster Hunter World</a></h5>
+              <p>Fecha de estreno inicial: 26 de enero de 2018 <br>
+                Productor(es): Ryozo Tsujimoto <br>
+                Modos de juego: Un jugador; Multijugador <br>
+                Modos: Videojuego de un jugador, Videojuego multijugador <br>
+                Plataformas: PlayStation 4, Xbox One, Microsoft Windows <br>
+                Premios: The Game Award al Mejor Juego de Rol</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-0">
+          <div class="feature-item set-bg" data-setbg="{% static 'img/features/generations.jpg' %}">
+            <span class="cata racing">old</span>
+            <div class="fi-content text-white">
+              <h5><a>Monster Hunter X</a></h5>
+              <p>Fecha de estreno inicial: 28 de noviembre de 2015 <br>
+                Distribuidor: Capcom <br>
+                Desarrollador: Capcom <br>
+                Plataformas: Nintendo Switch, Nintendo 3DS <br>
+                Modos: Videojuego de un jugador, Videojuego multijugador <br>
+                Géneros: Videojuego de rol de acción, Videojuego de acción-aventura</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-0">
+          <div class="feature-item set-bg" data-setbg="{% static 'img/features/4.jpg' %}">
+            <span class="cata racing">old</span>
+            <div class="fi-content text-white">
+              <h5><a>Monster Hunter 4</a></h5>
+              <p>Fecha de estreno inicial: 14 de septiembre de 2013 <br>
+                Distribuidor: Capcom <br>
+                Desarrollador: Capcom <br>
+                Modos de juego: Un jugador, multijugador <br>
+                Plataforma: Nintendo 3DS <br>
+                Modos: Videojuego de un jugador, Videojuego multijugador</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Seccion de Juegos fin -->
+
+
+  <!-- Seccion Baul del Recuerdo inicio  -->
+  <section class="recent-game-section spad set-bg" data-setbg="{% static 'img/top_banner.jpg' %}">
+    <div class="container">
+      <div class="section-title">
+        <div class="cata adventure">Juegos Antiguos</div>
+        <h2><u>Baul del Recuerdo</u></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="recent-game-item">
+            <div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/Monster_Hunter_logo.png' %}">
+              <div class="cata adventure">Ps2</div>
+            </div>
+            <div class="rgi-content">
+              <h5>Monster Hunter</h5>
+              <p>Monster Hunter es la primera entrega de la serie de videojuegos de acción-aventura de Capcom, apareciendo por primera vez en la plataforma PlayStation 2. Cuenta la historia de las aventuras de el héroe de la aldea Kokoto, quien tiene la misión de proteger a la aldea de la amenaza de una serie de criaturas gigantes llamadas Wyverns.
+              </p>
+              <iframe width="250" height="200" src="https://www.youtube.com/embed/IiM2xeZ5V8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="rgi-extra">
+                <div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+                <div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="recent-game-item">
+            <div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/Logo-MH2.png' %}">
+              <div class="cata adventure">Ps2</div>
+            </div>
+            <div class="rgi-content">
+              <h5>Monster Hunter 2</h5>
+              <p>Junto con las diversas especies de monstruos que regresan del primer Monster Hunter, Monster Hunter 2 contiene muchos nuevos monstruos, como el dragón de viento metálico Kushala Daora, la cabeza de león, dragón Teo Teskatoru (llamado Teostra en América del Norte y las versiones PAL de Monster Hunter Freedom 2) y su contraparte femenina Nana Teskatory (llamado Lunastra en América del Norte y las versiones PAL de MHF2), los primates y Babakonga Dodobrango (Congalala Blangonga y en MHF2), el toro o el minotauro, como Rajang monstruo, y el camaleón como un dragón Oonazuchi (Chameleos en MHF2). Con nuevos monstruos también viene la posibilidad de nuevas armas y armaduras.
+              </p>
+              <iframe width="250" height="200" src="https://www.youtube.com/embed/2iQ1mNVDt-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="rgi-extra">
+                <div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+                <div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="recent-game-item">
+            <div class="rgi-thumb set-bg" data-setbg="{% static 'img/recent-game/Logo-MH3_EN.png' %}">
+              <div class="cata adventure">Wii</div>
+            </div>
+            <div class="rgi-content">
+              <h5>Monster Hunter Tri</h5>
+              <p>Monster Hunter 3 Tri (モンスターハンター3（トライ） Monsutā Hantā Torai?, "Monster Hunter 3 (tri-)" en Japón) es la tercera entrega de la saga de videojuegos Monster Hunter, puesto a la venta para la videoconsola Wii el 1 de agosto de 2009 . Inicialmente, el juego estaba siendo desarrollado para PlayStation 3, pero la producción se trasladó a Wii debido a recortes presupuestarios. Previo a su debut, se incluyó una demo de Monster Hunter Tri en las versiones japonesas de Monster Hunter G.
+              </p>
+              <iframe width="250" height="200" src="https://www.youtube.com/embed/zw_Hqg0W_fE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="rgi-extra">
+                <div class="rgi-star"><img src="{% static 'img/icons/star.png' %}" alt=""></div>
+                <div class="rgi-heart"><img src="{% static 'img/icons/heart.png' %}" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Seccion Baul del Recuerdo fin -->
+
+
+  <!-- Seccion de Torneos inicio -->
+  <section class="tournaments-section spad">
+    <div class="container">
+      <div class="tournament-title">Torneos</div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="tournament-item mb-4 mb-lg-0">
+            <div class="ti-notic">Torneos en Linea</div>
+            <div class="ti-content">
+              <div class="ti-thumb set-bg" data-setbg="{% static 'img/tournament/58.jpg' %}"></div>
+              <div class="ti-text">
+                <h4>Super Smash Bros Ultimate</h4>
+                <ul>
+                  <li><span>El Torneo Empieza:</span> 12-09-2019</li>
+                  <li><span>El Torneo Termina:</span> 14-09-2019</li>
+                  <li><span>Cantidad de Participantes:</span> 20</li>
+                  <li><span>Organiza:</span> FenixMatias</li>
+                </ul>
+                <p><span>Reglas:</span> Solo se Utilizaran Personajes de la Saga de Nintendo 64</p>
+                <br>
+                <div class="user-panel">
+                  <a href="{% url 'registersmash' %}">Inscribirse</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'img/tournament/slack-imgs.com_-23-e1566375807577.jpg' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Seccion de Torneos fin -->
+
+
+  <!-- Seccion Dragones Ancianos inicio -->
+  <section class="review-section spad set-bg" data-setbg="{% static 'img/review/tumblr_ndfk5cs24j1tlz8ako1_500.gif' %}">
+    <div class="container">
+      <div class="section-title">
+        <div class="cata new">Top 3</div>
+        <h2><u>Los Dragones Ancianos Mas Fuertes</u></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="review-item">
+            <div class="review-cover set-bg" data-setbg="{% static 'img/review/67899563_370119966997145_6758345687436682547_n.jpg' %}">
+              <div class="score yellow">N°1</div>
+            </div>
+            <div class="review-text">
+              <div class="tournament-title">Fatalis (Monster Hunter)</div>
+              <p><big>El Fatalis es tan poderoso que ha hecho que un Lao-Shan Lung, un dragón anciano mas grande que el tenga que huir de el y destruyo un reino entero.</big></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="review-item">
+            <div class="review-cover set-bg" data-setbg="{% static 'img/review/Amatsumagatsuchi-Monster-Hunter-X.jpg' %}">
+              <div class="score purple">N°2</div>
+            </div>
+            <div class="review-text">
+              <div class="cata racing">Amatsumagatsuchi (Monster Hunter Portable 3rd.)</div>
+              <p><big>Es capaz de crear tormentas muy potentes, crear tornados y un potentisimo chorro de agua gigante, con sus tormentas podría disminuir las llamas del Fatalis, y con su habilidad de crear tornados y lanzar chorros a presión podrian hacerle bastante daño.</big></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="review-item">
+            <div class="review-cover set-bg" data-setbg="{% static 'img/review/MH3_AlatreonIntro4.png' %}">
+              <div class="score green">N°3</div>
+            </div>
+            <div class="review-text">
+              <div class="cata strategy">Alatreon (Monster Hunter 3)</div>
+              <p><big>Es un dragón anciano que puede controlar 4 elementos. Controlar cuatro elementos cuando la mayoria de los dragones ancianos controlan 1 es muy peligroso, ya que puede derrotar a sus enemigos con la combinación de sus movimientos elementales, podría hacerle bastante daño al Fatalis si usa ataques de hielo o dragón.</big></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="review-item">
+            <div class="review-cover set-bg" data-setbg="{% static 'img/review/70f704397264614083ecac66235cb96d.jpg' %}">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Seccion Dragones Ancianos fin -->
+
+  <!-- Seccion Link de Interes inicio -->
+  <section class="footer-section">
+    <div class="container">
+      <div class="footer-menu">
+        <img src="{% static 'img/introduction_img.png' %}">
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-logo text-white">
+            <a class="site-logo" href="{% url 'index' %}">
+            <img src="{% static 'img/Sin título.png' %}" alt=""></a>
+          </div>
+        </div>
+      </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget">
+            <h4 class="fw-title">Links de Interes</h4>
+            <div class="top-comment">
+              <div class="tc-item">
+                <div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/1.jpg' %}"></div>
+                <div class="tc-content">
+                  <p><a target="_blank" href="https://www.youtube.com/channel/UCIWTcgFvjgLXBcUrR0UQgYA?view_as=subscriber">FenixMatiasLabra</a> Canal Youtuber de Juegos.</p>
+                </div>
+              </div>
+              <div class="tc-item">
+                <div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/2.jpg' %}"></div>
+                <div class="tc-content">
+                  <p><a target="_blank" href="https://www.facebook.com/LuzFlordeCerezo/">Luz flor de cerezo</a> Tienda de estampados y amigurumis</p>
+                </div>
+              </div>
+              <div class="tc-item">
+                <div class="tc-thumb set-bg" data-setbg="{% static 'img/authors/3.jpg' %}"></div>
+                <div class="tc-content">
+                  <p><a target="_blank" href="https://www.facebook.com/daanagame/">Tienda Daana games</a> Venta de consolas, videojuegos y figuras de distintos animes y juegos.</p>
+                </div>
+                <br>
+                <img src="{% static 'img/Monster-Hunter-World-PNG-Download-Image.png' %}">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- Seccion Link de Interes fin -->
+
+  <!-- Contenido inicio -->
+  <footer class="footer-section">
+    <div class="container">
+      <h4>Nuestra Cantidad de Contenido:
+        Especies: {{ num_species }}
+        Mounstros: {{ num_monster }}
+        Armadura: {{ num_armor }}
+      </h4>
+    </div>
+  </footer>
+  <!-- Contenido fin -->
+
+  <!-- Menu 2 inicio -->
+  <footer class="footer-section">
+    <div class="container">
+      <ul class="footer-menu">
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'monsters' %}">Mounstros</a></li>
+        <li><a href="{% url 'armors' %}">Armaduras</a></li>
+      </ul>
+      <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | DarkPolifasicos Administradores: • Luis Toro • Michael Figueroa • Mario Muci</a></p>
+    </div>
+  </footer>
+  <!-- Menu 2 inicio -->
+
+  <!--====== Javascripts & Jquery ======-->
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.marquee.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
