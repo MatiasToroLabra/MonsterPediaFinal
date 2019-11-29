@@ -40,7 +40,8 @@ class Monster(models.Model):
 	habitat = models.CharField(max_length=1000)
 	size = models.CharField(max_length=10)
 	relative = models.CharField(max_length=500)
-	imagemonster = models.ImageField(upload_to='photos')
+	imagemonster = models.ImageField(blank=True, null=True,
+		upload_to='photos/%Y/%m/%D/')
 
 	class Meta:
 		ordering = ['namemonster', 'title']
