@@ -17,3 +17,4 @@ urlpatterns += [
     path('armor/<int:pk>/update/', views.ArmorUpdate.as_view(), name='armor_update'),
     path('armor/<int:pk>/delete/', views.ArmorDelete.as_view(), name='armor_delete'),
 ]
+

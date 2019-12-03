@@ -125,3 +125,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/photos/'
+
+LOGIN_REDIRECT_URL = '/monsterpedia'

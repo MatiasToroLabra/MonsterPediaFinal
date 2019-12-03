@@ -44,6 +44,7 @@
                     </div>
                     <div class="myform-bottom">
                       <form role="form" action="" method="post" class="">
+                        {% csrf_token %}
                         <div class="form-group">
                             <input type="text" name="form-firtsname" placeholder="Nombre" required="required" class="form-control" id="form-firtsname">
                         </div>

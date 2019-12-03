@@ -11,12 +11,14 @@ def index(request):
     num_armor=Armor.objects.all().count()
     num_species=Species.objects.all().count()
     num_monster=Monster.objects.all().count()
+    num_visits=request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits+1
 
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
     return render(
         request,
         'index.html',
-        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster},
+        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster,'num_visits':num_visits},
     )
 
 def login(request):
@@ -24,12 +26,14 @@ def login(request):
     num_armor=Armor.objects.all().count()
     num_species=Species.objects.all().count()
     num_monster=Monster.objects.all().count()
+    num_visits=request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits+1
 
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
     return render(
         request,
         'login2.html',
-        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster},
+        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster,'num_visits':num_visits},
     )
 
 def register(request):
@@ -37,12 +41,14 @@ def register(request):
     num_armor=Armor.objects.all().count()
     num_species=Species.objects.all().count()
     num_monster=Monster.objects.all().count()
+    num_visits=request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits+1
 
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
     return render(
         request,
         'register2.html',
-        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster},
+        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster,'num_visits':num_visits},
     )
 
 def registersmash(request):
@@ -50,12 +56,14 @@ def registersmash(request):
     num_armor=Armor.objects.all().count()
     num_species=Species.objects.all().count()
     num_monster=Monster.objects.all().count()
+    num_visits=request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits+1
 
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
     return render(
         request,
         'registersmash.html',
-        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster},
+        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster,'num_visits':num_visits},
     )
 
 class MonsterListView(generic.ListView):
