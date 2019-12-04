@@ -20,10 +20,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ('monsterpedia/',include('monsterpedia.urls')),
+    path ('', include("django.contrib.auth.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
@@ -34,7 +36,3 @@ if settings.DEBUG:
 		'document_root': settings.MEDIA_ROOT,
 		}),
 	]
-
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]

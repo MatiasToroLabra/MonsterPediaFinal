@@ -49,26 +49,24 @@
                                 {% endif %}
                             {% endif %}
                         </div>
-                        <form method="post" action="{% url 'login' %}">
+                        <div class="myform-top-right">
+                          <i class="fa fa-sign-in"></i>
+                        </div>
+                    </div>
+                    <div class="myform-bottom"> <!-- 2.3 Input -->
+                      <form role="form" action="" method="post" class=""> <!-- "role="form" formulario de Bootstrap -->
                         {% csrf_token %}
-                    <div class="myform-bottom">
-                      <form role="form" action="" method="post" class="">
-                        <div class="form-group">
-                            <td>{{ form.username.label_tag }}</td><br>
-                            <td><a>{{ form.username }}</a></td>
+                        <div class="form-group"> <!-- Cualquier elemento de formulario -->
+                            <input type="text" name="username" placeholder="Nombre de usuario" required="required" class="form-control" id="form-username">
                         </div>
                         <div class="form-group">
-                            <td>{{ form.password.label_tag }}</td><br>
-                            <td><a>{{ form.password }}</a></td>
+                            <input type="password" name="password" placeholder="Password" required="required" class="form-control" id="form-password">
                         </div>
-                        <div class="form-group">
-                          <button class="mybtn" type="submit">login</button>
-                            <input type="hidden" name="next" value="{{ next }}"/>
-                        </div>
-                        <p><a href="{% url 'password_reset' %}">Olvido Contraseña?</a></p>
-                      </form>
-                        </form>
-						              <button class="mybtn" onclick="location.href='{% url 'register' %}'">Registrate</button>
+						<div class="form-group">
+                        <button type="submit" class="mybtn btn-success">Entrar</button> <!-- "mybtn" clase propia -->
+						</div>
+						<button class="mybtn" onclick="location.href='{% url 'register' %}'">Registrate</button>
+					  </form>
                     </div>
               </div>
             </div>

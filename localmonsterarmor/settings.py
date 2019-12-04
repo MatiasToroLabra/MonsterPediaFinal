@@ -127,3 +127,4 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/photos/'
 
 LOGIN_REDIRECT_URL = '/monsterpedia'
+LOGOUT_REDIRECT_URL = '/monsterpedia'
