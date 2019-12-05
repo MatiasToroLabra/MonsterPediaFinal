@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -128,3 +127,10 @@ MEDIA_URL = '/photos/'
 
 LOGIN_REDIRECT_URL = '/monsterpedia'
 LOGOUT_REDIRECT_URL = '/monsterpedia'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'matiaszodiaco@gmail.com'
+EMAIL_HOST_PASSWORD = 'zodiaco5'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -38,8 +38,12 @@
         <img src="{% static 'img/Sin título.png' %}" alt="">
       </a>
       <div class="user-panel">
-        <li><a>{{ user.username }} Bienvenido a MonsterPedia ;)</a></li>
-       <a href="{% url 'login' %}">Login</a>  /  <a href="{% url 'register' %}">Registrarse</a> / <a href="{% url 'logout' %}">Logout</a>
+        <li><a>Bienvenido a MonsterPedia ;) {{ user.username }}</a></li>
+        {% if user.is_authenticated %}
+        <center><a href="{% url 'logout' %}">Logout</a> / <a href="{% url 'password_change' %}">Cambiar Contraseña</a>
+        {% else %}
+        <center><a href="{% url 'login' %}">Login</a>  /  <a href="{% url 'register' %}">Registrarse</a>
+        {% endif %}
       </div>
       <!-- Responsive -->
       <div class="nav-switch">
@@ -399,7 +403,7 @@
         Mounstros: {{ num_monster }}
         Armadura: {{ num_armor }}
       </h4>
-      <h4>Has visitado esta pagina {{ num_visits }}{% if num_visits == 1 %} time{% else %} veces ;){% endif %}</h4>
+      <h4>Has visitado esta pagina {{ num_visits }}{% if num_visits == 1 %} veces{% else %} veces ;){% endif %}</h4>
     </div>
   </footer>
   <!-- Contenido fin -->

@@ -21,6 +21,8 @@ from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
 from django.views.generic.base import TemplateView
+from django.contrib.auth import views as auth_views
+from monsterpedia import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
