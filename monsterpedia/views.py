@@ -38,6 +38,21 @@ def login(request):
         context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster,'num_visits':num_visits},
     )
 
+def register(request):
+
+    num_armor=Armor.objects.all().count()
+    num_species=Species.objects.all().count()
+    num_monster=Monster.objects.all().count()
+    num_visits=request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits+1
+
+    # Renderiza la plantilla HTML index.html con los datos en la variable contexto
+    return render(
+        request,
+        'register2.html',
+        context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster,'num_visits':num_visits},
+    )
+
 
 
 def registersmash(request):
@@ -54,21 +69,6 @@ def registersmash(request):
         'registersmash.html',
         context={'num_armor':num_armor,'num_species':num_species,'num_monster':num_monster,'num_visits':num_visits},
     )
-
-
-def register(request):
-    if request.method =='POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            
-
-        else:
-            form = UserCreationForm()
-
-            args = {'form': form}
-            return render(request, 'register2.html/', args)
-
 
 
 
