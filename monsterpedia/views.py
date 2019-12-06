@@ -72,7 +72,26 @@ def registersmash(request):
 
 
 
+def register(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            
+            
 
+        else:
+            for msg in form.error_messages:
+                print(form.error_messages[msg])
+
+            return render(request = request,
+                          template_name = "register2.html",
+                          context={"form":form})
+
+    form = UserCreationForm
+    return render(request = request,
+                  template_name = "register2.html",
+                  context={"form":form})
 
 
 class MonsterListView(generic.ListView):

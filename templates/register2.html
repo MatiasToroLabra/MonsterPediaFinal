@@ -23,39 +23,34 @@
 			<a class="site-logo" href="{% url 'index' %}">
 				<img src="{% static 'img2/Sin título.png' %}" alt="">
 			</a>
-			<div class="row">
-                <div class="col-sm-12" >
-                  <h1><strong>Dark Polifasicos /</strong> Formulario de Registro</h1>
+			<div class="row"> <!-- Fila 1 -->
+                <div class="col-sm-12" > <!-- (regilla de Bootstrap) 12 columnas con tamaño prefijo small -->
+                  <h1><strong>Dark Polifasicos /</strong> Formulario Login</h1>
                   <div class="mydescription">
-                    <p>Registrate para acceder a mas contenido! </p>
+                    <p>Has Login para acceder a mas contenido! </p>
                   </div>
                 </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3 myform-cont" >
-                    <div class="myform-top">
+            <div class="row"> <!-- Fila 2 -->
+              <div class="col-sm-20 col-sm-offset-0 myform-cont" > <!-- 2.1 Cuadrado negro -->
+                    <div class="myform-top"> <!-- 2.2 -->
                         <div class="myform-top-left">
-                          <h3>Registrate en Dark Polifasicos</h3>
-                            <p>Digita los siguientes datos:</p>
-                        </div>
-                        <div class="myform-top-right">
-                          <i class="fa fa-pencil"></i>
-                        </div>
-                    </div>
-                    <div class="myform-bottom">
-                      <form role="form" action="" method="post" class="">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <input type="text" name="form-firtsname" placeholder="Nombre" required="required" class="form-control" id="form-firtsname">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="form-lastname" placeholder="Apellido" required="required" class="form-control" id="form-lastname">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="form-email" placeholder="Correo Electrónico" required="required" class="form-control" id="form-email">
-                        </div>
-                        <button type="submit" class="mybtn">Registrar</button>
-                      </form>
+							<div class="container">
+									<form style="color:orange;" method="POST">
+										{% csrf_token %}
+										{{form.as_p}}
+
+										<button type="submit" class="mybtn">Crear Cuenta</button>
+											</form>
+
+       Ya tienes cuenta? Entra Aqui! <a href="/login" target="blank"><strong>login</strong></a>
+    </div>
+
+					
+                      
+					  
+					  
+					  
                     </div>
               </div>
             </div>
