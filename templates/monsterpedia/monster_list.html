@@ -24,38 +24,43 @@
 
 <body style="background-color:#080704;">
 	<audio src="{% static 'music/Monster Hunter World OST Main Theme   Stars At Our Backs 星に駆られて メインテーマソング HQ   4K.mp3' %}" autoplay></audio>
+	
 	<!-- Carga de Pagina -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
 
-	<!-- Seccion de Encabezamiento inicio -->
-	<header class="header-section">
-		<div class="container">
-		
-			<!-- Logo -->
-			<a class="site-logo" href="{% url 'index' %}">
-				<img src="{% static 'img/Sin título.png' %}" alt="">
-			</a>
-			<div class="user-panel">
-				<a href="{% url 'login' %}">Login</a>  /  <a href="register.html">Registrarse</a>
-			</div>
-			
-			<!-- responsive -->
-			<div class="nav-switch">
-				<i class="fa fa-bars"></i>
-			</div>
-			
-			<!-- Menu -->
-			<nav class="main-menu">
-				<ul>
-					<li><a href="{% url 'index' %}">Inicio</a></li>
-					<li><a href="{% url 'monsters' %}">Mounstros</a></li>
-					<li><a href="{% url 'armors' %}">Armaduras</a></li>
-				</ul>
-			</nav>
-	</header>
-	<!-- <!--Seccion de Encabezamiento fin -->
+  <!-- Seccion de Encabezamiento inicio -->
+  <header class="header-section">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="site-logo" href="{% url 'index' %}">
+        <img src="{% static 'img/Sin título.png' %}" alt="">
+      </a>
+      <div class="user-panel">
+        <li><a>Bienvenido a MonsterPedia ;) {{ user.username }}</a></li>
+        {% if user.is_authenticated %}
+        <center><a href="{% url 'logout' %}">Logout</a> / <a href="{% url 'password_change' %}">Cambiar Contraseña</a>
+        {% else %}
+        <center><a href="{% url 'login' %}">Login</a>  /  <a href="{% url 'register' %}">Registrarse</a>
+        {% endif %}
+      </div>
+      <!-- Responsive -->
+      <div class="nav-switch">
+        <i class="fa fa-bars"></i>
+      </div>
+      <!-- Menu -->
+      <nav class="main-menu">
+        <ul>
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="{% url 'monsters' %}">Mounstros</a></li>
+          <li><a href="{% url 'armors' %}">Armaduras</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Seccion de Encabezamiento fin -->
 
 	<!-- Seccion de Noticias Inicio -->
 	<div class="latest-news-section">

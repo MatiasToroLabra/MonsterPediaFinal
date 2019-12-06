@@ -7,22 +7,21 @@
   <meta name="description" content="Game Warrior Template">
   <meta name="keywords" content="warrior, game, creative, html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Logo -->   
-  <link href="{% static 'img/Logo175.ico" rel="shortcut icon' %}"/>
+  <!-- Logo -->
+  <link href="{% static 'img/Logo175.ico' %}" rel="shortcut icon"/>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
-</head>
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
 
 <body style="background-color:#080704;">
+  
   <!-- Carga de Pagina -->
   <div id="preloder">
     <div class="loader"></div>
@@ -31,20 +30,23 @@
   <!-- Seccion de Encabezamiento inicio -->
   <header class="header-section">
     <div class="container">
-    
+
       <!-- Logo -->
       <a class="site-logo" href="{% url 'index' %}">
         <img src="{% static 'img/Sin título.png' %}" alt="">
       </a>
       <div class="user-panel">
-        <a href="{% url 'login' %}">Login</a>  /  <a href="register.html">Registrarse</a>
+        <li><a>Bienvenido a MonsterPedia ;) {{ user.username }}</a></li>
+        {% if user.is_authenticated %}
+        <center><a href="{% url 'logout' %}">Logout</a> / <a href="{% url 'password_change' %}">Cambiar Contraseña</a>
+        {% else %}
+        <center><a href="{% url 'login' %}">Login</a>  /  <a href="{% url 'register' %}">Registrarse</a>
+        {% endif %}
       </div>
-      
-      <!-- responsive -->
+      <!-- Responsive -->
       <div class="nav-switch">
         <i class="fa fa-bars"></i>
       </div>
-      
       <!-- Menu -->
       <nav class="main-menu">
         <ul>
@@ -53,8 +55,9 @@
           <li><a href="{% url 'armors' %}">Armaduras</a></li>
         </ul>
       </nav>
+    </div>
   </header>
-  <!-- <!--Seccion de Encabezamiento fin -->
+  <!-- Seccion de Encabezamiento fin -->
 
   <!-- Seccion de Noticias Inicio -->
   <div class="latest-news-section">
